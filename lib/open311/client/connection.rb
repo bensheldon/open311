@@ -18,6 +18,7 @@ module Open311
 
       def connection
         Faraday.new(options) do |connection|
+          connection.use FaradayMiddleware::Gzip
           connection.use Faraday::Request::Multipart
           connection.use Faraday::Response::Mashify
           case format.to_s.downcase
