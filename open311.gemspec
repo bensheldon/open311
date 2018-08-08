@@ -3,8 +3,8 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'open311/version'
 
 Gem::Specification.new do |spec|
-  spec.add_dependency 'faraday', '~> 0.7'
-  spec.add_dependency 'faraday_middleware', '~> 0.7'
+  spec.add_dependency 'faraday', '~> 0.15'
+  spec.add_dependency 'faraday_middleware', '~> 0.12'
   spec.add_dependency 'hashie', '~> 3.3'
   spec.add_dependency 'multi_json', '~> 1.0'
   spec.add_dependency 'multi_xml', '~> 0.4'
