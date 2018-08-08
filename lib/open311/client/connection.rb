@@ -13,12 +13,12 @@ module Open311
           proxy: proxy,
           ssl: {verify: false},
           url: endpoint,
+          headers: headers,
         }
       end
 
       def connection
         Faraday.new(options) do |connection|
-          connection.use FaradayMiddleware::Gzip
           connection.use Faraday::Request::Multipart
           connection.use Faraday::Response::Mashify
           case format.to_s.downcase
